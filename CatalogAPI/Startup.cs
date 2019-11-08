@@ -38,12 +38,12 @@ namespace CatalogAPI
                 //c.AddDefaultPolicy(x => x.AllowAnyOrigin()
                 //.AllowAnyMethod()
                 //.AllowAnyHeader());
-                c.AddPolicy("AllowPartners", x =>
-                {
-                    x.WithOrigins("http://microsoft.com", "http://synergetics.com")
-                    .WithMethods("GET", "POST")
-                    .AllowAnyHeader();
-                });
+                // c.AddPolicy("AllowPartners", x =>
+                // {
+                //     x.WithOrigins("http://microsoft.com", "http://synergetics.com")
+                //     .WithMethods("GET", "POST")
+                //     .AllowAnyHeader();
+                // });
 
                 c.AddPolicy("AllowAll", x =>               {
                     x.AllowAnyOrigin()
