@@ -109,13 +109,13 @@ namespace CatalogAPI
             app.UseHttpsRedirection();
             app.UseCors("AllowAll");
             app.UseSwagger();
-            if (env.IsDevelopment()){
+         //   if (env.IsDevelopment()){
                 app.UseSwaggerUI(config =>
                 {
                     config.SwaggerEndpoint("/swagger/V1/swagger.json", "index.html");
                     config.RoutePrefix = "";
                 });
-            }
+          //  }
             app.UseAuthentication();
             app.UseMvc();
         }
